@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,14 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
+});
+
+//Route crud user
+Route::group(['prefix'=>'user'],function(){
+	Route::get('/',[UserController::class, 'index'])->name('user.index');
+	Route::get('/create',[UserController::class, 'create'])->name('user.create');
+	Route::post('/create',[UserController::class, 'store'])->name('user.store');
+	Route::get('/edit/{id}',[UserController::class, 'edit'])->name('user.edit');
+	Route::post('/update/{id}',[UserController::class, 'update'])->name('user.update');
+	Route::post('/delete/{id}',[UserController::class, 'destroy'])->name('user.delete');
 });

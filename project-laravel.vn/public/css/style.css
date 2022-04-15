@@ -1,3 +1,40 @@
 a {
     color: red
 }
+.header {
+    border-bottom: 1px solid #dee2e6;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+.header .title {
+    font-size: 30px;
+}
+.create-user {
+    padding: 20px 0;
+}
+.form-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.title-table {
+    background-color: #efefef;
+}
+.form-edit {
+    margin-bottom: 20px;
+}
+.form-title label {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 45px;
+}
+.form-edit input {
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    height: 45px;
+    border: 1px solid #000;
+}
